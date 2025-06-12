@@ -12,7 +12,27 @@ const UseState = () => {
         className="border mb-5 border-white p-2 px-5 rounded-full text-black font-bold hover:shadow-2xl hover:bg-slate-200 hover:scale-105"
         onClick={() => setCount((count) => count + 1)}
       >
-        Click Me
+        Increase
+      </button>
+      <p className=" bg-slate-100 text-blue-900 p-5 rounded-full">
+        This Is Counter {count}
+      </p>
+      {/* 2ND */}
+      <button
+        className="border mb-5 border-white p-2 px-5 rounded-full text-black font-bold hover:shadow-2xl hover:bg-slate-200 hover:scale-105"
+        onClick={() => setCount((count) => count - 1)}
+      >
+        Decrease
+      </button>
+      <p className=" bg-slate-100 text-blue-900 p-5 rounded-full">
+        This Is Counter {count}
+      </p>
+      {/* 3rd */}
+      <button
+        className="border mb-5 border-white p-2 px-5 rounded-full text-black font-bold hover:shadow-2xl hover:bg-slate-200 hover:scale-105"
+        onClick={() => setCount(0)}
+      >
+        Reset
       </button>
       <p className=" bg-slate-100 text-blue-900 p-5 rounded-full">
         This Is Counter {count}
