@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const UseState = () => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState();
+  const [text, setText] = useState();
   return (
     <div className=" w-full">
       {/* 1st Example */}
@@ -51,6 +52,17 @@ const UseState = () => {
         {isVisible && (
           <p className=" w-full text-center mt-5">This Text is Visible!</p>
         )}
+      </div>
+
+      {/* 3rd Example */}
+      <div className=" bg-black flex w-[90%] m-auto rounded-full mt-10 p-5 justify-center items-center flex-col ">
+        <input
+          type="text"
+          placeholder="Type Something Here..!"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+        <p>You Typed {text}</p>
       </div>
     </div>
   );
