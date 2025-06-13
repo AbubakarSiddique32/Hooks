@@ -57,12 +57,15 @@ const UseState = () => {
       {/* 3rd Example */}
       <div className=" bg-black flex w-[90%] m-auto rounded-full mt-10 p-5 justify-center items-center flex-col ">
         <input
+          className="px-3 py-2"
           type="text"
           placeholder="Type Something Here..!"
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <p>You Typed {text}</p>
+        <p className=" bg-white p-3  text-gray-600 mt-3 rounded-[5px]">
+          You Typed: {text}
+        </p>
       </div>
     </div>
   );
