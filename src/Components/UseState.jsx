@@ -4,6 +4,7 @@ const UseState = () => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState();
   const [text, setText] = useState();
+  const [show, setShow] = useState();
   return (
     <div className=" w-full">
       {/* 1st Example */}
@@ -66,6 +67,13 @@ const UseState = () => {
         <p className=" bg-white p-3  text-gray-600 mt-3 rounded-[5px]">
           You Typed: {text}
         </p>
+      </div>
+
+      {/* 4th Example */}
+
+      <div className=" bg-slate-500 flex w-[90%] m-auto rounded-full mt-10 p-5 justify-center items-center flex-col">
+        <input type={show ? "text" : "password"} placeholder="Enter password" />
+        <button onClick={() => setShow(!show)}>{show ? "hide" : "show"}</button>
       </div>
     </div>
   );
